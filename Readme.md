@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Марго](https://up.htmlacademy.ru/htmlcss/27/user/486753).
-* Наставник: `Неизвестно`.
+* Студент: [Маргарита](https://up.htmlacademy.ru/htmlcss/27/user/486753).
+* Наставник: [Анна Сухопарова](https://up.htmlacademy.ru/htmlcss/27/user/35902).
 
 ---
 
