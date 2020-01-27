@@ -2,63 +2,69 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Седона-Поиск отелей</title>
   </head>
   <body>
-    <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo.svg" width="140" height="71" alt="Логотип Седона">
-      </a>
-      <ul class="site-navigation">
-        <li><a href="">Информация</a></li>
-        <li><a href="">Фото и видео</a></li>
-        <li><a href="">Карта штата</a></li>
-        <li><a class="menu-current" href="">Гостиницы</a></li>
-      </ul>
-    </nav>
-    </header>
+    <div class="container">
+      <header class="main-header">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo.svg" width="140" height="71" alt="Логотип Седона">
+        </a>
+        <nav class="main-navigation">      
+          <ul class="site-navigation">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li class="menu-current"><a>Гостиницы</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <main class="container">
-      <section class="catalog">
-        <h2 class="visually-hidden">Каталог жилья:</h2>
-        <ul class="catalog-list">
-          <li class="catalog-item">
-            <h3><a href="">Amara Resort & Spa</a></h3>
-            <p class="catalog-item-price">
-              <span class="catalog-category">Гостиница</span>
-              <span class="catalog-hotel-price">От 4000 Р.</span>
-            </p>
-            <p class="catalog-item-btn">
-              <a class="button" href="#">Подробнее</a>
-              <a class="button-reserve" href="#">Забронировать</a>
-            </p>
-            <p class="catalog-item-photo">
-              <img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Фото гостиницы">
-            </p>
-            <span class="stars-rating"></span>
-            <p class="rating">Рейтинг: 8,5</p>
-          </li>
-
-          <li class="catalog-item">
-              <h3><a href="">Desert Quail Inn</a></h3>
-              <p class="catalog-item-price">
-                <span class="catalog-category">Мотель</span>
-                <span class="catalog-hotel-price">От 3000 Р.</span>
-              </p>
-              <p class="catalog-item-btn">
-                <a class="button" href="#">Подробнее</a>
-                <a class="button-reserve" href="#">Забронировать</a>
-              </p>
-              <p class="catalog-item-photo">
-                <img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Фото гостиницы">
-              </p>
-              <span class="stars-rating"></span>
-              <p class="rating">Рейтинг: 8,9</p>
+      <main class="container">
+        <section class="catalog">
+          <h2 class="visually-hidden">Каталог жилья:</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <div class="catalog-item-details">
+                <h3><a href="#">Amara Resort & Spa</a></h3>
+                <p class="catalog-item-price">
+                  <span class="catalog-category">Гостиница</span>
+                  <span class="catalog-hotel-price">От 4000 Р.</span>
+                </p>
+                <p class="catalog-item-btn">
+                  <a class="button" href="#">Подробнее</a>
+                  <a class="button-reserve" href="#">Забронировать</a>
+                </p>
+              </div>
+              <img class="catalog-item-photo" src="https://via.placeholder.com/135x90" width="135" height="90" alt="Фото гостиницы">
+              <div class="catalog-rating">
+                <span class="stars-rating"></span>
+                <p class="rating">Рейтинг: 8,5</p>
+              </div>
             </li>
 
             <li class="catalog-item">
-                <h3><a href="">Villas at Poco Diablo</a></h3>
+              <div class="catalog-item-details">
+                <h3><a href="#">Desert Quail Inn</a></h3>
+                <p class="catalog-item-price">
+                  <span class="catalog-category">Мотель</span>
+                  <span class="catalog-hotel-price">От 3000 Р.</span>
+                </p>
+                <p class="catalog-item-btn">
+                  <a class="button" href="#">Подробнее</a>
+                  <a class="button-reserve" href="#">Забронировать</a>
+                </p>
+              </div>
+              <img class="catalog-item-photo" src="https://via.placeholder.com/135x90" width="135" height="90" alt="Фото гостиницы">
+              <div class="catalog-rating">
+                <span class="stars-rating"></span>
+                <p class="rating">Рейтинг: 8,9</p>
+              </div>
+            </li>
+
+            <li class="catalog-item">
+              <div class="catalog-item-details">
+                <h3><a href="#">Villas at Poco Diablo</a></h3>
                 <p class="catalog-item-price">
                   <span class="catalog-category">Апартаменты</span>
                   <span class="catalog-hotel-price">От 2000 Р.</span>
@@ -67,17 +73,18 @@
                   <a class="button" href="#">Подробнее</a>
                   <a class="button-reserve" href="#">Забронировать</a>
                 </p>
-                <p class="catalog-item-photo">
-                  <img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Фото гостиницы">
-                </p>
+              </div>
+              <img class="catalog-item-photo" src="https://via.placeholder.com/135x90" width="135" height="90" alt="Фото гостиницы">
+              <div class="catalog-rating">
                 <span class="stars-rating"></span>
                 <p class="rating">Рейтинг: 9,2</p>
-              </li>
-        </ul>
-      </section>  
-    </main>
+              </div>
+            </li>
+          </ul>
+        </section>  
+      </main>
 
-    <footer class="main-footer">
+      <footer class="main-footer">
         <p class="footer-contacts">
           #VISITSEDONA<br>
           Тел: +7(495) 666-02-66
@@ -94,6 +101,6 @@
           </a>
         </p>
       </footer>
-    
+    </div>    
   </body>
-  </html>
+</html>
