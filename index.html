@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
     <div class="container">
       <header class="main-header">
@@ -11,7 +15,7 @@
           <img src="img/logo.svg" width="140" height="71" alt="Логотип Седона">
         </a>
         <nav class="main-navigation">       
-          <ul>
+          <ul class="main-nav-list">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
@@ -39,12 +43,12 @@
               <div class="advantage-num">— №1 —</div>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img src="img/feature-city.jpg" width="800" height="256" alt="Городок Седона">
+          <img class="advantage-img" src="img/feature-city.jpg" width="800" height="256" alt="Городок Седона">
         </section>
 
         <section class="advantage-text without-num">
           <h2 class="visually-hidden">Рекомендации по Седоне</h2>
-          <ul>
+          <ul class="advantage-list">
             <li class="advantage">
               <!--Иконку добавим псевдоэлементом-->
               <div class="advantage-header">Жильё</div>
@@ -63,7 +67,7 @@
 
         <section class="advantage-photo">
           <h2 class="visually-hidden">Преимущество 2</h2>
-          <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
+          <img class="advantage-img" src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
           <div class="advantage-photo-text">
             <div class="advantage-header">Там есть мост дьявола</div>
             <div class="advantage-num">— №2 —</div>
@@ -71,9 +75,9 @@
           </div>
         </section>
 
-        <section class="advantage-text">
+        <section class="advantage-text advantage-with-num">
           <h2 class="visually-hidden">Другие преимущества</h2>
-          <ul>
+          <ul class="advantage-list">
             <li class="advantage">
               <div class="advantage-header">Небольшая площадь</div>
               <div class="advantage-num">— №3 —</div>
@@ -97,7 +101,7 @@
           <p class="hotel-search-title">Заинтересовались?</p>
           <p>Укажите предполагаемые даты поездки, 
             и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <button type="button">Поиск гостиницы в Седоне</button>
+          <button class="btn btn-index" type="button">Поиск гостиницы в Седоне</button>
           <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="hotel-search-item">
               <label for="search-date">Дата заезда:</label>
@@ -125,7 +129,7 @@
               <input type="text" name="tourist-child" id="tourist-child" placeholder="0">
               <button class="btn-input" type="button" aria-label="Увеличить значение">+</button>
             </div> 
-            <button type="submit">Найти</button>
+            <button class="btn btn-form" type="submit">Найти</button>
           </form>               
         </section>
 
@@ -141,9 +145,11 @@
           Тел:<a href="tel:+74956660266" aria-label="телефон">+7(495) 666-02-66</a> 
         </p>  
         <div class="social">
-          <a class="social-button" href="#" aria-label="Twitter"></a>
-          <a class="social-button" href="#" aria-label="Facebook"></a>
-          <a class="social-button" href="#" aria-label="Youtube"></a>
+          <ul class="social-list">         
+            <li><a class="social-button" href="#" aria-label="Twitter"></a>T</li>
+            <li><a class="social-button" href="#" aria-label="Facebook"></a>F</li>
+            <li><a class="social-button" href="#" aria-label="Youtube"></a>Y</li>
+          </ul> 
         </div>  
         <p class="footer-copyright">
           Website by
