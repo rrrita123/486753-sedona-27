@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона-Поиск отелей</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
     <div class="container">
       <header class="main-header">
@@ -11,7 +15,7 @@
           <img src="img/logo.svg" width="140" height="71" alt="Логотип Седона">
         </a>
         <nav class="main-navigation">      
-          <ul>
+          <ul class="main-nav-list">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
@@ -94,14 +98,14 @@
             <li class="catalog-item">
               <img class="catalog-item-photo" src="img/hotel-amara.jpg" width="135" height="90" alt="Фото гостиницы">
               <div class="catalog-item-details">
-                <h3><a href="#">Amara Resort & Spa</a></h3>
+                <h3><a class="catalog-title" href="#">Amara Resort & Spa</a></h3>
                 <p class="catalog-item-price">
                   <span class="catalog-category">Гостиница</span>
                   <span class="catalog-hotel-price">От 4000 Р.</span>
                 </p>
                 <p class="catalog-item-btn">
-                  <a class="button" href="#">Подробнее</a>
-                  <a class="button-reserve" href="#">Забронировать</a>
+                  <a class="btn btn-details" href="#">Подробнее</a>
+                  <a class="btn btn-reserve" href="#">Забронировать</a>
                 </p>
               </div>
               <div class="catalog-rating">
@@ -113,14 +117,14 @@
             <li class="catalog-item">
               <img class="catalog-item-photo" src="img/hotel-desert.jpg" width="135" height="90" alt="Фото гостиницы">
               <div class="catalog-item-details">
-                <h3><a href="#">Desert Quail Inn</a></h3>
+                <h3><a class="catalog-title" href="#">Desert Quail Inn</a></h3>
                 <p class="catalog-item-price">
                   <span class="catalog-category">Мотель</span>
                   <span class="catalog-hotel-price">От 3000 Р.</span>
                 </p>
                 <p class="catalog-item-btn">
-                  <a class="button" href="#">Подробнее</a>
-                  <a class="button-reserve" href="#">Забронировать</a>
+                  <a class="btn btn-details" href="#">Подробнее</a>
+                  <a class="btn btn-reserve" href="#">Забронировать</a>
                 </p>
               </div>              
               <div class="catalog-rating">
@@ -132,14 +136,14 @@
             <li class="catalog-item">
               <img class="catalog-item-photo" src="img/hotel-villas.jpg" width="135" height="90" alt="Фото гостиницы">
               <div class="catalog-item-details">
-                <h3><a href="#">Villas at Poco Diablo</a></h3>
+                <h3><a class="catalog-title" href="#">Villas at Poco Diablo</a></h3>
                 <p class="catalog-item-price">
                   <span class="catalog-category">Апартаменты</span>
                   <span class="catalog-hotel-price">От 2000 Р.</span>
                 </p>
                 <p class="catalog-item-btn">
-                  <a class="button" href="#">Подробнее</a>
-                  <a class="button-reserve" href="#">Забронировать</a>
+                  <a class="btn btn-details" href="#">Подробнее</a>
+                  <a class="btn btn-reserve" href="#">Забронировать</a>
                 </p>
               </div>
               <div class="catalog-rating">
@@ -157,9 +161,11 @@
           Тел:<a href="tel:+74956660266" aria-label="телефон">+7(495) 666-02-66</a>
         </p>  
         <div class="social">
-          <a class="social-button" href="#" aria-label="Twitter"></a>
-          <a class="social-button" href="#" aria-label="Facebook"></a>
-          <a class="social-button" href="#" aria-label="Youtube"></a>
+          <ul class="social-list">
+            <li><a class="social-button" href="#" aria-label="Twitter"></a>T</li>
+            <li><a class="social-button" href="#" aria-label="Facebook"></a>F</li>
+            <li><a class="social-button" href="#" aria-label="Youtube"></a>Y</li>
+          </ul>
         </div>  
         <p class="footer-copyright">
           Website by
