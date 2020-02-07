@@ -86,9 +86,9 @@ button {
 }
 
 .main-img {
-	background-color: #ffffff, #ddebf4;
+	background-color: #ddebf4;
 	background-image: url(../img/bg-maska.png), url(../img/bg-index.jpg);
-	background-position: left -1px bottom -1px, 0 0;
+	background-position: 0 calc(100% + 1px), 0 22%;
 	background-repeat: no-repeat, no-repeat;	
 }
 
@@ -145,6 +145,7 @@ button {
 	line-height: 26px;
 }
 
+/* Стилизация формы index */
 .hotel-search-form,
 .hotel-search-form input {
 	line-height: 26px;
@@ -210,6 +211,110 @@ button {
 }
 
 /* Catalog.html */
+
+/*Для второго задания
+/*Стилизация form
+
+.filter {
+	color: #ffffff;
+
+	background-color: #7597bc;
+	background-image: url("../img/bg-filter.jpg");
+	background-position: 0 68%;
+	background-repeat: no-repeat;
+}
+
+.filter fieldset {
+	border: none;
+}
+
+.filter legend {
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: bold;	
+}
+
+.filter ul {
+	list-style: none;
+}
+
+.filter input {
+	font: inherit;
+
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+}
+
+.bnt-filter {
+	font-weight: normal;
+
+	background-color: transparent;
+	border: 2px solid #ffffff;
+}
+
+.bnt-filter:hover,
+.bnt-filter:focus {
+	color: #000000;
+
+	background-color: #ffffff;
+}*/
+
+/* Стилизация сортировки
+.sorting-total {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.sorting-title {
+	font-size: 12px;
+	line-height: 18px;
+	color: #000000;
+}
+
+.sorting button {
+	font: inherit;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(0, 0, 0, 0.3);
+
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px dotted #81b3d2 ;
+}
+
+.sorting .btn-sorting:hover,
+.sorting .btn-sorting:focus {
+	color: #81b3d2;
+}
+
+.sorting .btn-sorting:active {
+	color: #000000;
+	border: none;
+}
+
+.sorting .sorting-active {
+	border: none;
+	color: #81b3d2;
+}
+
+.sorting .btn-icon {
+	border: none;
+}
+
+.sorting .btn-icon:hover,
+.sorting .btn-icon:focus {
+	color: #000000;
+}
+
+.sorting .btn-icon:active {
+	color: #81b3d2;
+}
+*/
 .menu-current {
 	color: #766357;
 }
