@@ -12,7 +12,9 @@ body {
 }
 
 .container {
+	margin: 0 auto;
 	width: 1200px;
+
 	box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 	background-color: #ffffff;
 }
@@ -88,7 +90,7 @@ button {
 .main-img {
 	background-color: #ddebf4;
 	background-image: url(../img/bg-maska.png), url(../img/bg-index.jpg);
-	background-position: 0 calc(100% + 1px), 0 22%;
+	background-position: center calc(100% + 1px), 0 22%;
 	background-repeat: no-repeat, no-repeat;	
 }
 
@@ -101,7 +103,7 @@ button {
 	font-size: 21px;	
 	color: #000000;
 }
-/* лишнее для первого задания
+
 .advantage-img {
 	background-color: #ddebf4;
 }
@@ -129,7 +131,7 @@ button {
 .advantage-with-num{
 	background-color: #eeeeee;
 }
-*/
+
 .hotel-search p {
 	text-align: center;
 }
@@ -211,10 +213,7 @@ button {
 }
 
 /* Catalog.html */
-
-/*Для второго задания
-/*Стилизация form
-
+/*Стилизация form*/
 .filter {
 	color: #ffffff;
 
@@ -259,9 +258,9 @@ button {
 	color: #000000;
 
 	background-color: #ffffff;
-}*/
+}
 
-/* Стилизация сортировки
+/* Стилизация сортировки*/
 .sorting-total {
 	font-size: 21px;
 	line-height: 26px;
@@ -314,7 +313,7 @@ button {
 .sorting .btn-icon:active {
 	color: #81b3d2;
 }
-*/
+
 .menu-current {
 	color: #766357;
 }
