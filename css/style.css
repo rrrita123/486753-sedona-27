@@ -8,11 +8,25 @@ body {
 	color:  #333333;
 	text-transform: uppercase;
 
+	background-color: #f2f2f2;
+}
+
+.container {
+	width: 1200px;
+	box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 	background-color: #ffffff;
+}
+
+img {
+	max-width: 100%;
 }
 
 a {
 	text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn {
@@ -24,7 +38,18 @@ a {
 	color: #ffffff;
 	text-transform: uppercase;
 
+	background-color: #766357;
 	border: none;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: #604e43;
+}
+
+.btn:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #503e33;
 }
 
 .visually-hidden {
@@ -61,10 +86,10 @@ a {
 }
 
 .main-img {
-	background-color: #ddebf4;
-	background-image: url(../img/bg-index.jpg);
-	background-position: 0 0;
-	background-repeat: no-repeat;	
+	background-color: #ffffff, #ddebf4;
+	background-image: url(../img/bg-maska.png), url(../img/bg-index.jpg);
+	background-position: left -1px bottom -1px, 0 0;
+	background-repeat: no-repeat, no-repeat;	
 }
 
 .info {
@@ -118,19 +143,6 @@ a {
 .btn-index {
 	font-size: 21px;
 	line-height: 26px;
-
-	background-color: #766357;
-}
-
-.btn-index:hover,
-.btn-index:focus {
-	background-color: #604e43;
-}
-
-.btn-index:active {
-	color: rgba(255, 255, 255, 0.3);
-
-	background-color: #503e33;
 }
 
 .hotel-search-form,
@@ -170,8 +182,6 @@ a {
 }
 
 .btn-form:active {
-	color: rgba(255, 255, 255, 0.3);
-
 	background-color: #5496bd;
 }
 
@@ -237,24 +247,7 @@ a {
 }
 
 .catalog-item-btn .btn-details:active {
-	color:  rgba(255, 255, 255, 0.3);
-
 	background-color: #5496bd;
-}
-
-.catalog-item-btn .btn-reserve {
-	background-color:  #766357;
-}
-
-.catalog-item-btn .btn-reserve:hover,
-.catalog-item-btn .btn-reserve:focus {
-	background-color: #604e43;
-}
-
-.catalog-item-btn .btn-reserve:active {
-	color: rgba(255, 255, 255, 0.3);
-
-	background-color: #503e33;
 }
 
 .rating {
