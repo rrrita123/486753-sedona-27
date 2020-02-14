@@ -135,11 +135,6 @@ input[type="checkbox"].visually-hidden {
 	background-repeat: no-repeat, no-repeat;	
 }
 
-.main-img img{	
-	width: 459px;
-	height: 353px;
-}
-
 .info {
 	display: flex;
 	flex-direction: column;
@@ -172,23 +167,19 @@ input[type="checkbox"].visually-hidden {
 .advantage-photo-text {
 	padding: 47px 49px 45px 49px;
 	width: 400px;
-	min-height: 256px;
 	box-sizing: border-box;
 	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-		color: #ffffff;
+	color: #ffffff;
 	text-align: center;
 
 	background-color: #81b3d2;
 }
 
 .advantage-img {
-	width: 800px;
-	min-height: 256px;
-
 	background-color: #ddebf4;
 }
 
@@ -242,7 +233,6 @@ input[type="checkbox"].visually-hidden {
 	content: url("../img/icon-house.svg");
 	width: 75px;
 	height: 72px;
-
 }
 
 .icon-food::before {
@@ -453,9 +443,8 @@ input[type="checkbox"].visually-hidden {
 /*Стилизация form*/
 .filter {
 	padding-top: 27px;
-	min-height: 217px;
-	box-sizing: border-box;
-
+	padding-bottom: 5px;
+	
 	color: #ffffff;
 
 	background-color: #7597bc;
@@ -497,7 +486,7 @@ input[type="checkbox"].visually-hidden {
 
 .filter-item {
 	margin-bottom: 25px;
-	padding-left: 38px;
+	padding-left: 40px;
 }
 
 .filter-item label {
@@ -559,11 +548,12 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	align-items: center;
 
-	min-height: 87px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .sorting-total {
-	margin-right: 46px;
+	margin-right: 48px;
 
 	font-size: 21px;
 	line-height: 26px;
@@ -573,32 +563,23 @@ input[type="checkbox"].visually-hidden {
 
 .sorting-type {
 	display: flex;
+	/*align-items: flex-end;*/
+
+	margin-top: 5px;
 }
 
 .sorting-title {
-	margin-right: 34px;
-
+	margin-right: 40px;
+	
 	font-size: 12px;
 	line-height: 18px;
 	color: #000000;
 }
 
-.sorting-type-list {
-	display: flex;
-	flex-wrap: wrap;
-
-	padding: 0;
-	margin: 0;
-
-	list-style: none;
-}
-
-.sorting-type-list li:nth-child(2) {
-	margin-left: 21px;
-	margin-right: 21px;
-}
-
 .sorting button {
+	margin-right: 33px;
+	padding: 0;
+
 	font: inherit;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -625,16 +606,12 @@ input[type="checkbox"].visually-hidden {
 	color: #81b3d2;
 }
 
-/*.sorting .btn-sorting:first-child{
-	margin-left: 21px;
-	margin-right: 21px;
-}*/
-
 .sorting-icon {
 	margin-left: auto;
 }
 
 .sorting-icon button {
+	margin: 0;
 	padding: 0;
 	font-size: 16px;
 }
@@ -663,13 +640,13 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-item {
+	padding-left: 72px;
+	padding-right: 72px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	box-sizing: border-box;
-
+	
 	display: flex;
 	align-items: center;
-	min-height: 150px;
 
 	border-top: 1px solid #e5e5e5;
 }
@@ -692,7 +669,7 @@ input[type="checkbox"].visually-hidden {
 	justify-content: space-between;
 
 	min-height: 90px;
-	margin-left: 30px;
+	margin-left: 31px;
 }
 
 .catalog-item-details h3 {
@@ -731,7 +708,6 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	justify-content: space-between;
 	width: 258px;
-
 }
 
 .catalog-item-btn .btn-details {
