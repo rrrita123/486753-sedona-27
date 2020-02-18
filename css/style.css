@@ -54,8 +54,7 @@ button {
 	background-color: #503e33;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden {
+.visually-hidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -93,6 +92,8 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
+	margin-left: 72px;
+	margin-right: 72px;
 	padding: 0;
 
 	list-style: none;
@@ -100,14 +101,30 @@ input[type="checkbox"].visually-hidden {
 
 .main-nav-list li {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	width: 239px;
+	width: 241px;
 	min-height: 56px;
 }
 
+.nav-to-left,
+.nav-to-right {
+	display: flex;
+}
+
+.nav-to-right {
+	margin-left: 91px;
+}
+
+.nav-to-left li {
+	justify-content: flex-start;
+}
+
+.nav-to-right li {
+	justify-content: flex-end;
+}
+
 .main-nav-list li:nth-child(3) {
-	margin-left: 244px; 
+	margin-left: 200px; 
 }
 
 .main-navigation a {
@@ -193,7 +210,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .advantage-without-num .advantage-header {
-	margin-top: 33px;
+	margin-top: 29px;
 	margin-bottom: 10px;
 }
 
@@ -233,12 +250,14 @@ input[type="checkbox"].visually-hidden {
 	content: url("../img/icon-house.svg");
 	width: 75px;
 	height: 72px;
+	margin-top: 4px;
 }
 
 .icon-food::before {
 	content: url("../img/icon-food.svg");
 	width: 74px;
 	height: 70px;
+	margin-top: 6px;
 }
 
 .icon-souvenir::before {
@@ -325,6 +344,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .hotel-search-item {
+	position: relative;
+
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 29px;
@@ -354,6 +375,11 @@ input[type="checkbox"].visually-hidden {
 	padding-top: 6px;
 	padding-left: 12px;
 	padding-bottom: 6px;
+	padding-right: 42px;
+	width: 346px;
+	box-sizing: border-box;
+
+	margin-left: auto;	
 }
 
 .hotel-search-container {
@@ -367,12 +393,19 @@ input[type="checkbox"].visually-hidden {
 }
 
 .btn-calendar {
+	position: absolute;
+	right: 9px;
+	top: 8px;
+
+	display: flex;
+	padding: 0;
 	border: none;
-	padding-left: 8px;
-  padding-right: 8px;
-	padding-top: 5px;
-	
-	fill: #a9a9a9;
+
+	background-color: transparent;
+}
+
+.btn-calendar path {
+	fill: #cacaca;
 }
 
 .btn-calendar:hover path,
@@ -388,25 +421,33 @@ input[type="checkbox"].visually-hidden {
 	margin-right: 27px;
 }
 
-.data-input {
-	margin-left: auto;
-	width: 298px;
-}
-
 .person-input {
+	padding-left: 38px;
+	padding-right: 38px;
 	padding-top: 6px;
 	padding-bottom: 6px;
+  box-sizing: border-box;
 	text-align: center;
-	width: 38px;
+	width: 114px;
 }
 
 .btn-input {
-	position: relative;
-	padding-left: 15px;
-  padding-right: 23px;
-
+	padding: 0;
 	border: none;
-	width: 20px;
+	width: 38px;
+	height: 38px;
+
+	background-color: transparent;
+}
+
+.btn-minus {
+	position: absolute;
+	right: 75px;
+}
+
+.btn-plus {
+	position: absolute;
+	right: 0;
 }
 
 .btn-minus::before,
@@ -414,6 +455,8 @@ input[type="checkbox"].visually-hidden {
 	content: "";
 
 	position: absolute;
+	left: 13px;
+	top: 18px;
 	width: 12px;
 	height: 3px;
 
@@ -422,14 +465,16 @@ input[type="checkbox"].visually-hidden {
 
 .btn-plus::before {
 	width: 11px;
+	left: 14px;
+	top: 18px;
 }
 
 .btn-plus::after {
 	content: "";
 
 	position: absolute;
-	top: 15px;
-  left: 19px;
+	top: 14px;
+  left: 18px;
 	width: 3px;
 	height: 11px;
 
@@ -471,6 +516,10 @@ input[type="checkbox"].visually-hidden {
 	background-color: #5496bd;
 }
 
+.map img {
+	display: block;
+}
+
 .main-footer {
 	position: absolute;
 	bottom: 0;
@@ -504,12 +553,19 @@ input[type="checkbox"].visually-hidden {
 	color: #000000;
 }
 
+.contacts-tel {
+	display: block;
+	margin-top: 7px;
+}
+
 .social {
-	width: 156px;
+	margin-top: 30px;
+	margin-bottom: 36px;
 }
 
 .social-list {
 	padding: 0;
+	margin: 0;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -529,8 +585,8 @@ input[type="checkbox"].visually-hidden {
 	position: relative;
 
 	display: block;
-	width: 46px;
-	height: 48px;
+	width: 100%;
+	height: 100%;
 }
 
 .social-button-t::after {
@@ -594,7 +650,7 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	align-items: center;
 
-	width: 200px;
+	width: 204px;
 	line-height: 26px;
 	color: #000000;
 }
@@ -602,7 +658,7 @@ input[type="checkbox"].visually-hidden {
 .footer-copyright a {
 	display: flex;
 
-	margin-left: 5px;
+	margin-left: 8px;
 }
 
 .copyright-html:hover path {
@@ -816,10 +872,10 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-item {
-	padding-left: 72px;
+	padding-left: 71px;
 	padding-right: 72px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 27px;
+	padding-bottom: 29px;
 	
 	display: flex;
 	align-items: center;
@@ -849,8 +905,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-item-details h3 {
-	margin-bottom: 5px;
-
 	font-size: 21px;
 	line-height: 26px;
 	text-align: left;
@@ -870,7 +924,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-item .catalog-item-price {
-	margin-bottom: 7px;
+	margin-bottom: 9px;
 
 	display: flex;
 }
@@ -917,7 +971,6 @@ input[type="checkbox"].visually-hidden {
 	justify-content: space-between;
 	
 	margin-left: auto;
-	min-height: 90px;
 }
 
 .rating {
@@ -936,8 +989,9 @@ input[type="checkbox"].visually-hidden {
 
 .stars-rating {
 	margin-left: auto;
+	margin-bottom: 46px;
 
-	font-size: 24px;
+	font-size: 23px;
   letter-spacing: 3px;
 	color: #81b3d2; 
 }
