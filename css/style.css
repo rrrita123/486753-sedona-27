@@ -747,7 +747,7 @@ button {
 	border-color: #6a6a6a;;
 }
 
-.filter-input-checkbox:disabled:disabled:checked + label::before {
+.filter-input-checkbox:disabled:checked + label::before {
 	background-image: url(../img/checkbox-disabled.svg);
 	background-repeat: no-repeat;
 
