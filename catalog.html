@@ -41,7 +41,7 @@
                     <label for="filter-parking">Парковка</label>
                   </li>
                   <li class="filter-item">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi" disabled>
                     <label for="filter-wi-fi">Wi-Fi</label>
                   </li>
                 </ul>
@@ -50,7 +50,7 @@
                 <legend>Тип жилья:</legend>
                 <ul>
                   <li class="filter-item">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked disabled>
                     <label for="filter-hotel">Гостиница</label>
                   </li>
                   <li class="filter-item">
@@ -67,16 +67,19 @@
                 <legend>Стоимость в сутки (Р):</legend>
                 <div class="filter-price">
                   <label class="min-place">от
-                    <input type="text" name="price-from" id="filter-price-from" aria-label="стоимость от" placeholder="0">
+                    <input type="text" name="price-from" id="filter-price-from" value="0" aria-label="стоимость от">
                   </label>
                   <label class="max-place">до
-                    <input type="text" name="price-to" id="filter-price-to" aria-label="стоимость до" placeholder="3000">
+                    <input type="text" name="price-to" id="filter-price-to" value="3000" aria-label="стоимость до">
                   </label>
                 </div>
                 <div class="filter-range">
-                  <button class="circle-icon-range" type="button" aria-label="изменение стоимости от"></button>
-                  <input type="range" name="range-price" min="0" max="4000" step="100">
-                </div>
+                  <div class="scale">
+                    <div class="second-scale"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                  </div>
                 <button class="btn bnt-filter" type="submit">Показать</button>                
               </fieldset>
                         
@@ -116,10 +119,10 @@
                 </p>
               </div>
               <div class="catalog-rating">
-                <span class="stars-rating">★</span>
-                <span class="stars-rating">★</span>
-                <span class="stars-rating">★</span>
-                <span class="stars-rating">★</span>
+                <span class="stars-rating"></span>
+                <span class="stars-rating"></span>
+                <span class="stars-rating"></span>
+                <span class="stars-rating"></span>
                 <p class="rating">Рейтинг: 8,5</p>
               </div>
             </li>
@@ -138,9 +141,9 @@
                 </p>
               </div>              
               <div class="catalog-rating">
-                <span class="stars-rating">★</span>
-                <span class="stars-rating">★</span>
-                <span class="stars-rating">★</span>
+                <span class="stars-rating"></span>
+                <span class="stars-rating"></span>
+                <span class="stars-rating"></span>
                 <p class="rating">Рейтинг: 8,9</p>
               </div>
             </li>
@@ -159,8 +162,8 @@
                 </p>
               </div>
               <div class="catalog-rating">
-                <span class="stars-rating">★</span>
-                <span class="stars-rating">★</span>
+                <span class="stars-rating"></span>
+                <span class="stars-rating"></span>
                 <p class="rating">Рейтинг: 9,2</p>
               </div>
             </li>
