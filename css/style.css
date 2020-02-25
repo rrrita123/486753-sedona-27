@@ -227,13 +227,12 @@ button {
 
 .advantage-item {
 	width: 400px;
-	padding-left: 48px;
-	padding-right: 48px;
+	padding-left: 49px;
+	padding-right: 49px;
 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-
+	
 	text-align: center;
 }
 
@@ -241,20 +240,21 @@ button {
 	content: url("../img/icon-house.svg");
 	width: 75px;
 	height: 72px;
-	margin-top: 4px;
+	margin: 4px auto 0;
 }
 
 .icon-food::before {
 	content: url("../img/icon-food.svg");
 	width: 74px;
 	height: 70px;
-	margin-top: 6px;
+	margin: 6px auto 0;
 }
 
 .icon-souvenir::before {
 	content: url("../img/icon-souvenir.svg");
 	width: 64px;
 	height: 76px;
+	margin: 0 auto;
 }
 
 .advantage-with-num {
@@ -297,7 +297,7 @@ button {
 
 .btn-index {
 	margin-top: 33px;
-	padding: 30px 139px 30px 139px;
+	padding: 30px 138px 30px 138px;
 	
 	width: 568px;
 	
@@ -321,6 +321,8 @@ button {
 	box-sizing: border-box;
 	width: 568px;
 	min-height: 395px;
+	left: 50%;
+	margin-left: -284px;
 
 	background-color: #ffffff;
 	box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
@@ -345,6 +347,7 @@ button {
 .hotel-search-item label {
 	display: block;
 	padding-top: 6px;
+	width: 105px;
 }
 
 .hotel-search-form input {
@@ -352,21 +355,25 @@ button {
 
 	border: none;
 	background-color: #f2f2f2;
+	border: 2px solid #f2f2f2;
 }
 
 .hotel-search-form input:hover {
 	background-color: #ebebeb;
+	border: 2px solid #ebebeb;
 }
 
 .hotel-search-form input:focus {
 	background-color: #ffffff;
+	border: 2px solid #e5e5e5;
+
 }
 
 .hotel-search-form .data-input {
-	padding-top: 6px;
-	padding-left: 12px;
-	padding-bottom: 6px;
-	padding-right: 42px;
+	padding-top: 4px;
+	padding-left: 10px;
+	padding-bottom: 4px;
+	padding-right: 40px;
 	width: 346px;
 	box-sizing: border-box;
 
@@ -380,7 +387,7 @@ button {
 }
 
 .hotel-search-container label {
-	margin-right: 39px;
+	margin-right: 7px;
 }
 
 .btn-calendar {
@@ -409,14 +416,14 @@ button {
 }
 
 .hotel-search-container .person-child {
-	margin-right: 27px;
+	width: 56px;
 }
 
 .person-input {
-	padding-left: 38px;
-	padding-right: 38px;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-left: 36px;
+	padding-right: 36px;
+	padding-top: 4px;
+	padding-bottom: 4px;
   box-sizing: border-box;
 	text-align: center;
 	width: 114px;
@@ -744,7 +751,13 @@ button {
 }
 
 .filter-input-checkbox:disabled + label::before {
-	border-color: #6a6a6a;;
+	border-color: #6a6a6a;
+	
+	cursor: default;
+}
+
+.filter-input-checkbox:disabled + label {
+	cursor: default;
 }
 
 .filter-input-checkbox:disabled:checked + label::before {
@@ -752,6 +765,12 @@ button {
 	background-repeat: no-repeat;
 
 	border: none;
+
+	cursor: default;
+}
+
+.filter-input-checkbox:disabled:checked + label {
+	cursor: default;
 }
 
 .filter-price {
@@ -804,6 +823,7 @@ button {
 
 	font: inherit;
 	color: inherit;
+	line-height: 21px;
 
 	background-color: transparent;	
 	border: none;
@@ -812,7 +832,7 @@ button {
 .filter-range {
 	position: relative;
 
-	margin-bottom: 31px;
+	margin-bottom: 34px;
 }
 
 .filter-range .scale {
@@ -940,6 +960,8 @@ button {
 .sorting .sorting-active {
 	border: none;
 	color: #81b3d2;
+
+	cursor: default;
 }
 
 .sorting-icon {
@@ -1005,7 +1027,6 @@ button {
 	flex-direction: column;
 	justify-content: space-between;
 
-	min-height: 93px;
 	margin-left: 31px;
 }
 
@@ -1029,7 +1050,8 @@ button {
 }
 
 .catalog-item .catalog-item-price {
-	margin-bottom: 9px;
+	margin-top: 7px;
+	margin-bottom: 12px;
 
 	display: flex;
 }
@@ -1089,14 +1111,15 @@ button {
 	margin-left: 2px;
 }
 
-.rating {
+.catalog-item .rating {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	
-	min-width: 110px;
-	min-height: 27px;
 
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 13px;
+	padding-right: 13px;
+	
 	color: #666666;
 	text-align: center;
 
