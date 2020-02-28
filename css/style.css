@@ -196,7 +196,16 @@ button {
 	font-weight: bold;
 }
 
+.advantage-with-num .advantage-header{
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .advantage-photo-text .advantage-header {
+	width: 151px;
+  margin-left: auto;
+  margin-right: auto;
 	margin-bottom: 24px;
 }
 
@@ -236,6 +245,17 @@ button {
 	text-align: center;
 }
 
+.advantage-with-num .advantage-text {
+	width: 262px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.advantage-with-num .advantage-text5 {
+	width: 259px;
+	margin: auto;
+}
+
 .icon-house::before {
 	content: url("../img/icon-house.svg");
 	width: 75px;
@@ -258,9 +278,12 @@ button {
 }
 
 .advantage-with-num {
+	position: relative;
+
 	padding-top: 47px;
 	min-height: 256px;
 	box-sizing: border-box;
+	z-index: 2;
 
 	background-color: #eeeeee;
 }
@@ -270,10 +293,14 @@ button {
 }
 
 .hotel-search {
+	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	min-height: 291px;
+
+	z-index: 1;
 }
 
 .hotel-search-title {
@@ -306,17 +333,24 @@ button {
 }
 
 /* Стилизация формы index */
-.hotel-search {
-	position: relative;
+@keyframes leaves {
+	0% {
+
+		transform: translateY(-300px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .hotel-search-form {
 	position: absolute;
 	top: 100%;
-	z-index: 1;
+	z-index: -2;
 
-	display: flex;
-	flex-direction: column;	
+	display: none;
+
 	padding: 55px;
 	box-sizing: border-box;
 	width: 568px;
@@ -326,6 +360,26 @@ button {
 
 	background-color: #ffffff;
 	box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.hotel-search::before {
+	content: "";
+	left: 0;
+	position: absolute;
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	
+	background-color: #ffffff;
+}
+
+.form-search-show {
+	display: flex;
+	flex-direction: column;	 
+
+	animation-name: leaves;
+	animation-duration: 1.5s;
 }
 
 .hotel-search-form,
@@ -501,6 +555,7 @@ button {
 
 	font-size: 21px;
 	line-height: 26px;
+	width: 100%;
 
 	background-color: #81b3d2;
 }
@@ -688,16 +743,18 @@ button {
 }
 
 .filter fieldset {
+	width: 230px;
 	margin: 0;
 	padding: 0;
 	border: none;
 }
 
 .filter fieldset:first-child  {
-	margin-right: 119px;
+	margin-right: 25px;
 }
 
 .filter fieldset:last-child {
+	width: 318px;
 	margin-left: auto;
 }
 
@@ -761,7 +818,7 @@ button {
 }
 
 .filter-input-checkbox:disabled:checked + label::before {
-	background-image: url(../img/checkbox-disabled.svg);
+	background-image: url("../img/checkbox-disabled.svg");
 	background-repeat: no-repeat;
 
 	border: none;
@@ -869,7 +926,7 @@ button {
 }
 
 .range-toggle-max {
-	left: 80%;
+	right: 46px;
 }
 
 .range-toggle:hover {
@@ -920,7 +977,9 @@ button {
 
 .sorting-type {
 	display: flex;
+	flex-wrap: wrap;
 
+	width: 830px;
 	margin-top: 5px;
 }
 
@@ -1001,12 +1060,11 @@ button {
 .catalog-item {
 	padding-left: 71px;
 	padding-right: 72px;
-	padding-top: 27px;
-	padding-bottom: 30px;
+	padding-top: 29px;
+	padding-bottom: 29px;
 	
 	display: flex;
-	align-items: center;
-
+	
 	border-top: 1px solid #e5e5e5;
 }
 
@@ -1021,18 +1079,16 @@ button {
 }
 
 .catalog-item-details {
-	margin-right: 15px;
-
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 
+	margin-right: 15px;
 	margin-left: 31px;
+	width: 750px;
 }
 
 .catalog-item-details h3 {
 	font-size: 21px;
-	line-height: 26px;
 	text-align: left;
 }
 
@@ -1050,8 +1106,8 @@ button {
 }
 
 .catalog-item .catalog-item-price {
-	margin-top: 7px;
-	margin-bottom: 12px;
+	margin-top: 9px;
+	margin-bottom: 13px;
 
 	display: flex;
 }
@@ -1061,27 +1117,19 @@ button {
 	margin-right: 6px;
 }
 
-.catalog-item-btn {
-	display: flex;
-	justify-content: space-between;
-	width: 258px;
-}
-
-.catalog-item-btn .btn-details {
-	padding: 3px 0;
-	width: 110px;
-	min-height: 27px;
-	box-sizing: border-box;
+.catalog-item-btn .btn-details,
+.catalog-item-btn .btn-reserve {
+	display: inline-block;
+	vertical-align: top;
+	padding: 3px 16px;
+	margin-right: 5px;
 
 	background-color: #81b3d2;
 }
 
 .catalog-item-btn .btn-reserve {
-	padding: 3px 0;
-	width: 142px;
-	min-height: 27px;
-	box-sizing: border-box;
-}
+	background-color: #766357
+} 
 
 .catalog-item-btn .btn-details:hover,
 .catalog-item-btn .btn-details:focus {
@@ -1094,6 +1142,7 @@ button {
 
 .catalog-rating {
 	display: inline-block;
+	vertical-align: top;
 	text-align: right;
 		
 	margin-left: auto;
@@ -1106,8 +1155,9 @@ button {
 	background-repeat: no-repeat;
 	
 	display: inline-block;
+	vertical-align: top;
 	margin-left: auto;
-	margin-bottom: 43px;
+	margin-bottom: 48px;
 	margin-left: 2px;
 }
 
