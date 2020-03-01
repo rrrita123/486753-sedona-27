@@ -1,9 +1,9 @@
-var buttonSearch = document.querySelector(".btn-index");
-var popup = document.querySelector("form");
-var dateArrival = popup.querySelector("[name=hotel-search-date]"); 
-var dateDeparture = popup.querySelector("[name=search-departure-date]");
-var tourist = popup.querySelector("[name=tourist-count]");
-var touristChild = popup.querySelector("[name=tourist-child]");
+var buttonSearch = document.querySelector(".btn-search");
+var popup = document.querySelector(".hotel-search-form");
+var dateArrival = popup.querySelector("#search-date"); 
+var dateDeparture = popup.querySelector("#departure-date");
+var tourist = popup.querySelector("#tourist-count");
+var touristChild = popup.querySelector("#tourist-child");
 
 var isStorageSupport = true;
 var storage = "";
@@ -26,6 +26,10 @@ buttonSearch.addEventListener("click", function(evt) {
 popup.addEventListener("submit", function(evt) {
   if (!dateArrival.value || !dateDeparture.value || !tourist.value || !touristChild.value) {
     evt.preventDefault();
+    popup.classList.remove("form-search-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("form-search-error");
+    alert("Для поиска гостиницы заполните все поля");
     console.log("Для поиска гостиницы заполните все поля");
   } else {
     if (isStorageSupport) {
