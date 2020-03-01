@@ -322,7 +322,7 @@ button {
 	font-weight: bold;
 }
 
-.btn-index {
+.btn-search {
 	margin-top: 33px;
 	padding: 30px 138px 30px 138px;
 	
@@ -342,6 +342,28 @@ button {
 	100% {
 		transform: translateY(0);
 	}
+}
+
+@keyframes shake {
+	0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .hotel-search-form {
@@ -379,7 +401,12 @@ button {
 	flex-direction: column;	 
 
 	animation-name: leaves;
-	animation-duration: 1.5s;
+	animation-duration: 1s;
+}
+
+.form-search-error {
+	animation-name: shake;
+	animation-duration: 0.6s;
 }
 
 .hotel-search-form,
@@ -569,8 +596,26 @@ button {
 	background-color: #5496bd;
 }
 
-.map img {
+.map {
+	position: relative;
+	z-index: 0;
+}
+
+.map p {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+
+	margin: 0;
+}
+
+.map iframe {
+	position: relative;
 	display: block;
+	z-index: 2;
+
+	border: none;
 }
 
 .main-footer {
@@ -581,6 +626,7 @@ button {
 	min-height: 120px;
 	width: 1200px;
 	box-sizing: border-box;
+	z-index: 3;
 
 	display: flex;
 	align-items: center;
