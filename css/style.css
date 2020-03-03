@@ -1232,7 +1232,7 @@ button {
 
 .catalog-item-btn .btn-reserve:active {
 	background-color: #503e33;
-	color rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-item-btn .btn-details:hover,
