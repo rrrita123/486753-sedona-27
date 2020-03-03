@@ -64,7 +64,8 @@ button {
 
 	white-space: nowrap;
 
-	clip-path: inset(100%);
+	-webkit-clip-path: inset(100%);
+					clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
@@ -333,21 +334,36 @@ button {
 }
 
 /* Стилизация формы index */
-@keyframes leaves {
+@-webkit-keyframes leaves {
 	0% {
 
-		transform: translateY(-300px);
+		-webkit-transform: translateY(-300px);
+						transform: translateY(-300px);
 	}
 
 	100% {
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+						transform: translateY(0);
+	}
+}
+@keyframes leaves {
+	0% {
+
+		-webkit-transform: translateY(-300px);
+						transform: translateY(-300px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+						transform: translateY(0);
 	}
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
 	0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -355,14 +371,41 @@ button {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+	0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
@@ -400,13 +443,17 @@ button {
 	display: flex;
 	flex-direction: column;	 
 
-	animation-name: leaves;
-	animation-duration: 1s;
+	-webkit-animation-name: leaves;
+					animation-name: leaves;
+	-webkit-animation-duration: 1s;
+					animation-duration: 1s;
 }
 
 .form-search-error {
-	animation-name: shake;
-	animation-duration: 0.6s;
+	-webkit-animation-name: shake;
+					animation-name: shake;
+	-webkit-animation-duration: 0.6s;
+					animation-duration: 0.6s;
 }
 
 .hotel-search-form,
@@ -899,7 +946,8 @@ button {
 	height: 22px;
 
 	background-color: #ffffff;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
 }
 
 .filter-price label {
@@ -1177,6 +1225,16 @@ button {
 	background-color: #766357
 } 
 
+.catalog-item-btn .btn-reserve:hover,
+.catalog-item-btn .btn-reserve:focus {
+	background-color: #604e43;
+}
+
+.catalog-item-btn .btn-reserve:active {
+	background-color: #503e33;
+	color rgba(255, 255, 255, 0.3);
+}
+
 .catalog-item-btn .btn-details:hover,
 .catalog-item-btn .btn-details:focus {
 	background-color: #669ec0;
@@ -1225,5 +1283,4 @@ button {
 .footer-catalog {
 	position: static;
 }
-
 
