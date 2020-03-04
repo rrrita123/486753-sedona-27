@@ -28,10 +28,6 @@ a {
 	text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-}
-
 .btn {
 	font: inherit;
 
@@ -42,6 +38,8 @@ button {
 
 	background-color: #766357;
 	border: none;
+
+	cursor: pointer;
 }
 
 .btn:hover,
@@ -82,7 +80,6 @@ button {
 	left: 50%;
 	margin-left: -70px; 
 }
-
 
 .main-navigation {
 	font-weight: bold;
@@ -325,9 +322,8 @@ button {
 
 .btn-search {
 	margin-top: 33px;
-	padding: 30px 138px 30px 138px;
-	
-	width: 568px;
+	padding: 30px 138px;	
+	width: 293px;
 	
 	font-size: 21px;
 	line-height: 26px;
@@ -336,7 +332,6 @@ button {
 /* Стилизация формы index */
 @-webkit-keyframes leaves {
 	0% {
-
 		-webkit-transform: translateY(-300px);
 						transform: translateY(-300px);
 	}
@@ -346,9 +341,9 @@ button {
 						transform: translateY(0);
 	}
 }
+
 @keyframes leaves {
 	0% {
-
 		-webkit-transform: translateY(-300px);
 						transform: translateY(-300px);
 	}
@@ -528,6 +523,8 @@ button {
 	border: none;
 
 	background-color: transparent;
+
+	cursor: pointer;
 }
 
 .btn-calendar path {
@@ -564,6 +561,8 @@ button {
 	height: 38px;
 
 	background-color: transparent;
+
+	cursor: pointer;
 }
 
 .btn-minus {
@@ -1103,6 +1102,8 @@ button {
 .sorting .btn-sorting:hover,
 .sorting .btn-sorting:focus {
 	color: #81b3d2;
+
+	cursor: pointer;
 }
 
 .sorting .btn-sorting:active {
@@ -1135,6 +1136,8 @@ button {
 .sorting .btn-icon:hover,
 .sorting .btn-icon:focus {
 	color: #000000;
+
+	cursor: pointer;
 }
 
 .sorting .btn-icon:active {
