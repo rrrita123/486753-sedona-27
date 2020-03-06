@@ -16,12 +16,12 @@ try {
 
 buttonSearch.addEventListener("click", function(evt) {
   evt.preventDefault();
-  if (popup.classList.contains("form-search-show")) {
-    popup.classList.remove("form-search-show");
+  if (popup.classList.contains("form-search-close")) {
+    popup.classList.remove("form-search-close");
   } else {
-    popup.classList.add("form-search-show");
+    popup.classList.add("form-search-close");
   }
-});
+  });
 
 popup.addEventListener("submit", function(evt) {
   if (!dateArrival.value || !dateDeparture.value || !tourist.value || !touristChild.value) {
