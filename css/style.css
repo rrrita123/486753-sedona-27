@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	
-	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	color:  #333333;
@@ -221,6 +221,7 @@ a {
 	padding: 0;
 
 	display: flex;
+	flex-wrap: wrap;
 
 	list-style: none;
 }
@@ -233,7 +234,7 @@ a {
 }
 
 .advantage-item {
-	width: 400px;
+	width: 302px;
 	padding-left: 49px;
 	padding-right: 49px;
 
@@ -323,37 +324,13 @@ a {
 .btn-search {
 	margin-top: 33px;
 	padding: 30px 138px;	
-	width: 293px;
+	width: 567px;
 	
 	font-size: 21px;
 	line-height: 26px;
 }
 
 /* Стилизация формы index */
-@-webkit-keyframes leaves {
-	0% {
-		-webkit-transform: translateY(-300px);
-						transform: translateY(-300px);
-	}
-
-	100% {
-		-webkit-transform: translateY(0);
-						transform: translateY(0);
-	}
-}
-
-@keyframes leaves {
-	0% {
-		-webkit-transform: translateY(-300px);
-						transform: translateY(-300px);
-	}
-
-	100% {
-		-webkit-transform: translateY(0);
-						transform: translateY(0);
-	}
-}
-
 @-webkit-keyframes shake {
 	0%,
   100% {
@@ -409,7 +386,8 @@ a {
 	top: 100%;
 	z-index: -2;
 
-	display: none;
+	display: flex;
+	flex-direction: column;	 
 
 	padding: 55px;
 	box-sizing: border-box;
@@ -420,6 +398,9 @@ a {
 
 	background-color: #ffffff;
 	box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+
+	transition-property: top;
+	transition-duration: 1s;
 }
 
 .hotel-search::before {
@@ -434,14 +415,8 @@ a {
 	background-color: #ffffff;
 }
 
-.form-search-show {
-	display: flex;
-	flex-direction: column;	 
-
-	-webkit-animation-name: leaves;
-					animation-name: leaves;
-	-webkit-animation-duration: 1s;
-					animation-duration: 1s;
+.hotel-search-form.form-search-close {
+	top: -120px;	
 }
 
 .form-search-error {
@@ -511,6 +486,19 @@ a {
 
 .hotel-search-container label {
 	margin-right: 7px;
+}
+
+.hotel-search-item input::placeholder {
+	color: #000000;
+}
+
+.hotel-search-item input::-webkit-input-placeholder {
+	color: #000000;
+}
+
+.hotel-search-item input::-moz-placeholder {
+	color: #000000;
+	opacity:1;
 }
 
 .btn-calendar {
@@ -714,7 +702,8 @@ a {
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	width: 156px;
+
 	list-style: none;
 }
 
@@ -890,6 +879,12 @@ a {
 	border-radius: 4px;
 }
 
+.filter-input-checkbox:focus + label::before,
+.input-focus:focus,
+.btn-focus:focus {
+	outline: rgb(59, 153, 252) solid 2px;
+}
+
 .filter-input-checkbox:checked + label::before {
 	width: 27px;
 	height: 23px;
@@ -966,6 +961,18 @@ a {
 	width: 82px;
 }
 
+.filter-price input::placeholder {
+	color: #ffffff;
+}
+
+.filter-price input::-webkit-input-placeholder {
+	color: #ffffff;
+}
+
+.filter-price input::-moz-placeholder {
+	color: #ffffff;
+	opacity:1;
+}
 
 .filter input {
 	width: 50px;
@@ -1026,6 +1033,16 @@ a {
 	border-width: 9px;
 }
 
+.range-toggle-min:hover {
+	top: -10px;
+	left: -1px;
+}
+
+.range-toggle-max:hover {
+	top: -10px;
+  right: 45px;
+}
+
 .bnt-filter {
 	display: block;
 
@@ -1059,6 +1076,19 @@ a {
 	padding-bottom: 30px;
 }
 
+.sorting .sorting-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sorting li {
+	display: flex;
+}
+
 .sorting-total {
 	margin-right: 48px;
 
@@ -1084,11 +1114,10 @@ a {
 	color: #000000;
 }
 
-.sorting button {
+.sorting a {
 	margin-right: 33px;
 	padding: 0;
 
-	font: inherit;
 	text-transform: uppercase;
 	font-size: 12px;
 	line-height: 18px;
@@ -1122,14 +1151,18 @@ a {
 	margin-left: auto;
 }
 
-.sorting-icon button {
+.sorting-icon li {
+	width: 15px;
+	margin-left: 8px;
+}
+
+.sorting-icon a {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
 }
 
 .sorting .btn-icon {
-	margin-right: 3px;
 	border: none;
 }
 
@@ -1248,24 +1281,37 @@ a {
 }
 
 .catalog-rating {
-	display: inline-block;
-	vertical-align: top;
-	text-align: right;
-		
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
 	margin-left: auto;
+
+	text-align: right;
 }
 
-.stars-rating {
-	width: 18px;
+.catalog-rating .stars {
 	height: 17px;
 	background-image: url("../img/star.svg");
-	background-repeat: no-repeat;
-	
-	display: inline-block;
-	vertical-align: top;
-	margin-left: auto;
+	background-repeat: space;
+
 	margin-bottom: 48px;
-	margin-left: 2px;
+}
+
+.stars-4 {
+	width: 89px;	
+}
+
+.stars-3 {
+	width: 65px;
+}
+
+.stars-2 {
+	width: 41px;
+}
+
+.stars-1 {
+	width: 18px;
 }
 
 .catalog-item .rating {
