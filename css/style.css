@@ -146,7 +146,8 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 216px;
+	padding-top: 38px;
+	padding-bottom: 37px;
 
 	line-height: 26px;
 	text-align: center;
@@ -226,11 +227,12 @@ a {
 	list-style: none;
 }
 
-.advantage-without-num {
-	padding-top: 56px;
-	box-sizing: border-box;
+.advantage-without-num .advantage-list {
+	padding-bottom: 68px;
+}
 
-	min-height: 330px;
+.advantage-without-num li {
+	padding-top: 56px;
 }
 
 .advantage-item {
@@ -278,13 +280,17 @@ a {
 
 .advantage-with-num {
 	position: relative;
-
-	padding-top: 47px;
-	min-height: 256px;
-	box-sizing: border-box;
 	z-index: 2;
 
 	background-color: #eeeeee;
+}
+
+.advantage-with-num .advantage-list {
+	padding-bottom: 44px;
+}
+
+.advantage-with-num li {
+	padding-top: 47px;
 }
 
 .advantage-with-num .advantage-header {
@@ -315,7 +321,7 @@ a {
 	line-height: 24px;
 }
 
-.hotel-search-title{
+.hotel-search-title {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: bold;
@@ -464,7 +470,6 @@ a {
 .hotel-search-form input:focus {
 	background-color: #ffffff;
 	border: 2px solid #e5e5e5;
-
 }
 
 .hotel-search-form .data-input {
@@ -481,6 +486,7 @@ a {
 .hotel-search-container {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-top: 1px;
 }
 
@@ -882,7 +888,7 @@ a {
 .filter-input-checkbox:focus + label::before,
 .input-focus:focus,
 .btn-focus:focus {
-	outline: rgb(59, 153, 252) solid 2px;
+	outline: rgb(255, 204, 0) solid 2px;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1125,7 +1131,7 @@ a {
 
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px dotted #81b3d2 ;
+	border-bottom: 1px dotted #81b3d2;
 }
 
 .sorting .btn-sorting:hover,
@@ -1258,7 +1264,7 @@ a {
 }
 
 .catalog-item-btn .btn-reserve {
-	background-color: #766357
+	background-color: #766357;
 } 
 
 .catalog-item-btn .btn-reserve:hover,
